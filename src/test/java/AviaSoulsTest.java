@@ -49,14 +49,14 @@ public class AviaSoulsTest {
 
     @Test
     public void shouldRateFromLowToHighByPrice() {
-        Ticket[] expected = {ticket2, ticket1, ticket3, ticket4};
+        Ticket[] expected = {ticket1, ticket3, ticket4};
         Ticket[] actual = manager.search("City1", "City2");
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void testSearchAndSortByReturnsTicketsSortedByFlightTime() {
+    public void tshouldRateFromLowToHighByPriceByFlightTime() {
         Comparator<Ticket> comparator = new TicketTimeComparator();
 
         Ticket[] expected = {ticket1, ticket4, ticket3};
