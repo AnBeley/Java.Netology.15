@@ -60,4 +60,13 @@ public class Ticket implements Comparable<Ticket> {
             return 0;
         }
     }
+    public int flightTime() {
+        int result;
+        if (timeFrom >= timeTo) {
+            result = (24 - timeFrom) + timeTo;
+        } else {
+            result = timeTo - timeFrom;
+        }
+        return result;
+    }
 }
